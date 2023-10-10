@@ -2,37 +2,33 @@
 // Scrivere un programma che chieda all’utente:
 // - Il numero di chilometri da percorrere
 // - Età del passeggero
-// let kilometers = parseInt(prompt("Inserire numero km da percorrere."));
-// let age = parseInt(prompt("Inserire l'eta' del passeggero."));
-// console.log(kilometers, age);
-
-// SICUREZZA DI RIEMPIMENTO
-if (isNaN(kilometers) || isNaN(age)) {
-  alert("Per favore inserire solo valori numerici");
-  window.location.reload();
-}
-
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 // - il prezzo del biglietto è definito in base ai km (0.21 € al km)
-let baseTicketPrice = 0.21;
-let ticketPrice = baseTicketPrice * kilometers;
-console.log(ticketPrice);
-
 // - va applicato uno sconto del 20% per i minorenni
-if (age < 18) {
-  ticketPrice = (ticketPrice - ticketPrice * 0.2).toFixed(2);
-  console.log(ticketPrice);
-}
-
 // - va applicato uno sconto del 40% per gli over 65
-else if (age >= 65) {
-  ticketPrice = (ticketPrice - ticketPrice * 0.4).toFixed(2);
-  console.log(ticketPrice);
-} else {
-  ticketPrice = ticketPrice.toFixed(2);
-  console.log(ticketPrice);
-}
+const creation = document.querySelector(".btn-success");
+const reset = document.querySelector(".btn-danger");
 
+creation.addEventListener("click", function () {
+  let name = document.getElementById("enterName").value;
+  let secondName = document.getElementById("enterSecondName").value;
+  let kilometers = parseInt(document.getElementById("enterDistance").value);
+  let age = document.getElementById("selectDiscount").value;
+
+  let baseTicketPrice = 0.21;
+  let ticketPrice = baseTicketPrice * kilometers;
+
+  if (age < 18) {
+    ticketPrice = ticketPrice - ticketPrice * 0.2;
+    console.log(ticketPrice.toFixed(2));
+  } else if (age >= 65) {
+    ticketPrice = ticketPrice - ticketPrice * 0.4;
+    console.log(ticketPrice.toFixed(2));
+  } else {
+    ticketPrice = ticketPrice;
+    console.log(ticketPrice.toFixed(2));
+  }
+});
 // MILESTONE 1:
 // Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
 
