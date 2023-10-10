@@ -18,6 +18,12 @@ creation.addEventListener("click", function () {
   let baseTicketPrice = 0.21;
   let ticketPrice = baseTicketPrice * kilometers;
 
+  //   VERIFICA INSERIMENTO DATI
+  if (isNaN(kilometers) || age === "" || name === "" || secondName === "") {
+    alert("Per favore riempire i campi come richiesto");
+    window.location.reload();
+  }
+
   if (age < 18) {
     ticketPrice = ticketPrice - ticketPrice * 0.2;
     console.log(ticketPrice.toFixed(2));
@@ -29,6 +35,7 @@ creation.addEventListener("click", function () {
     console.log(ticketPrice.toFixed(2));
   }
 });
+
 // MILESTONE 1:
 // Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
 
