@@ -10,7 +10,7 @@
 
 #ticket {
   border: 2px solid black;
-  height: 150px;
+  min-height: 150px;
   width: 85%;
 
   padding: 10px;

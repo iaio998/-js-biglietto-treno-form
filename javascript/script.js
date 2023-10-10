@@ -9,6 +9,11 @@
 const creation = document.querySelector(".btn-success");
 const reset = document.querySelector(".btn-danger");
 
+let myName = document.getElementById("nome-cognome");
+let myOffer = document.getElementById("offer-type");
+// let myName = document.getElementById("nome-cognome");
+// let myName = document.getElementById("nome-cognome");
+
 creation.addEventListener("click", function () {
   let name = document.getElementById("enterName").value;
   let secondName = document.getElementById("enterSecondName").value;
@@ -24,16 +29,22 @@ creation.addEventListener("click", function () {
     window.location.reload();
   }
 
-  if (age < 18) {
+  if (age === "Under 18") {
     ticketPrice = ticketPrice - ticketPrice * 0.2;
     console.log(ticketPrice.toFixed(2));
-  } else if (age >= 65) {
+  } else if (age === "Over 65") {
     ticketPrice = ticketPrice - ticketPrice * 0.4;
     console.log(ticketPrice.toFixed(2));
   } else {
     ticketPrice = ticketPrice;
     console.log(ticketPrice.toFixed(2));
   }
+  myName.innerHTML = `
+  <strong><em>${name} ${secondName}</em></strong>
+  `;
+  myOffer.innerHTML = `
+  <strong><em>${age}</em></strong>
+  `;
 });
 
 // MILESTONE 1:
