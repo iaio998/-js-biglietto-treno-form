@@ -19,7 +19,19 @@ let ticketPrice = baseTicketPrice * kilometers;
 console.log(ticketPrice);
 
 // - va applicato uno sconto del 20% per i minorenni
-// - va applicato uno sconto del 40% per gli over 65.
+if (age < 18) {
+  ticketPrice = (ticketPrice - ticketPrice * 0.2).toFixed(2);
+  console.log(ticketPrice);
+}
+
+// - va applicato uno sconto del 40% per gli over 65
+else if (age >= 65) {
+  ticketPrice = (ticketPrice - ticketPrice * 0.4).toFixed(2);
+  console.log(ticketPrice);
+} else {
+  ticketPrice = ticketPrice.toFixed(2);
+  console.log(ticketPrice);
+}
 
 // MILESTONE 1:
 // Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
