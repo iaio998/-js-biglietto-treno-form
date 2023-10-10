@@ -18,13 +18,39 @@
 
 <body>
 
-    <main>
+    <main class="container vh-100 border">
 
-        <div>
-            <div>
-
+        <div class="container center">
+            <form id="form" class="row my-3">
+                <div class="col-2">
+                    <label for="enterName" class="form-label">Enter your first name</label>
+                    <input type="text" class="form-control" id="enterName" placeholder="John">
+                </div>
+                <div class="col">
+                    <label for="enterSecondName" class="form-label">Enter your second name</label>
+                    <input type="text" class="form-control" id="enterSecondName" placeholder="Wick">
+                </div>
+                <div class="col">
+                    <label for="enterDistance" class="form-label">Enter distance to travel</label>
+                    <input type="text" class="form-control" id="enterDistance" placeholder="100 km">
+                </div>
+                <div class="col">
+                    <label for="selectDiscount" class="form-label">Select your offer</label>
+                    <select class="form-select" aria-label="Default select example" id="selectDiscount">
+                        <option selected>Click to choose</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+            </form>
+            <div id="ticket" class="my-3">
+                <div>
+                    ciao
+                </div>
             </div>
         </div>
+
 
     </main>
 
