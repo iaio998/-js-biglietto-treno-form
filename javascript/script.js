@@ -14,8 +14,13 @@ if (isNaN(kilometers) || isNaN(age)) {
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
 // - il prezzo del biglietto è definito in base ai km (0.21 € al km)
+let baseTicketPrice = 0.21;
+let ticketPrice = baseTicketPrice * kilometers;
+console.log(ticketPrice);
+
 // - va applicato uno sconto del 20% per i minorenni
 // - va applicato uno sconto del 40% per gli over 65.
+
 // MILESTONE 1:
 // Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.
 // MILESTONE 2:
