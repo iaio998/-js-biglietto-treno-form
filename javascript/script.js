@@ -74,6 +74,6 @@ creation.addEventListener("click", function () {
    <strong><em>${getRndInteger(10000, 100000)}</em></strong>
    `;
   myTktPrice.innerHTML = `
-  <strong><em>${ticketPrice.toFixed(2)}</em></strong>
+  <strong><em>${ticketPrice.toFixed(2)}\u20AC</em></strong>
   `;
 });
